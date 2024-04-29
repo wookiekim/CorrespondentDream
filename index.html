@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XB3PR2Y1TQ"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-XB3PR2Y1TQ');
+    </script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>CorrespondentDream: Enhancing 3D Fidelity of Text-to-3D using Cross-View Correspondences</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,500,600' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="assets/css/Highlight-Clean.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="robots" content="noindex">
+
+    <meta property="og:site_name" content="CorrespondentDream" />
+    <meta property="og:type" content="video.other" />
+    <meta property="og:title" content="CorrespondentDream: Enhancing 3D Fidelity of Text-to-3D using Cross-View Correspondences" />
+    <meta property="og:description" content="CorrespondentDream: Enhancing 3D Fidelity of Text-to-3D using Cross-View Correspondences, 2023." />
+    <meta property="og:url" content="" />
+
+    <script src="assets/js/video_comparison.js"></script>
+    <script type="module" src="https://unpkg.com/@google/model-viewer@2.0.1/dist/model-viewer.min.js"></script>
+</head>
+
+<body>
+    <div class="highlight-clean" style="padding-bottom: 10px;">
+        <div class="container" style="max-width: 1024px; margin-bottom: 20px;">
+            <h1 class="text-center"><b>CorrespondentDream</b>: Enhancing 3D Fidelity of Text-to-3D using Cross-View Correspondences</h1>
+        </div>
+        <div class="container" style="max-width: 1024px; margin-bottom: 20px;">
+            <h3 class="text-center">CVPR 2024</h5>
+        </div>
+        <div class="container" style="max-width: 1200px; margin-bottom: 20px;">
+            <div class="row authors">
+                <div class="col">
+                    <h5 class="text-center"><a class="text-center" href="https://wookiekim.github.io/">Seungwook Kim<sup>1,2</sup> </a></h5>
+                </div>
+                <div class="col">
+                    <h5 class="text-center"><a href="https://likojack.github.io/kejieli/#/home">Kejie Li<sup>2</sup></a></h5>
+                </div>
+                <div class="col">
+                    <h5 class="text-center"><a class="text-center" href="https://sites.google.com/view/xueqingdeng7/">Xueqing Deng<sup>2</sup></a></h5>
+                </div>
+                <div class="col">
+                    <h5 class="text-center"><a class="text-center" href="https://seasonsh.github.io/">Yichun Shi<sup>2</sup></a></h5>
+                </div>
+                <div class="col">
+                    <h5 class="text-center"><a class="text-center" href="https://cvlab.postech.ac.kr/~mcho/">Minsu Cho<sup>1</sup></a></h5>
+                </div>
+                <div class="col">
+                    <h5 class="text-center"><a class="text-center" href="https://pengwangucla.github.io/peng-wang.github.io/">Peng Wang<sup>2</sup></a></h5>
+                </div>
+            </div>
+            <div class="row affiliations">
+                <div class="col">
+                    <h6 class="text-center"><a class="text-center"><sup>1</sup>POSTECH, South Korea</a></h6>
+                </div>
+                <div class="col">
+                    <h6 class="text-center"><a class="text-center"><sup>2</sup>ByteDance, USA</a></h6>
+                </div>
+            </div>
+        </div>
+        <div class="buttons" style="margin-top: 8px; margin-bottom: 8px;">
+            <a class="btn btn-light" role="button" href="https://arxiv.org/abs/2404.10603">
+                <svg style="width:24px;height:24px;margin-left:-12px;margin-right:12px" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M16 0H8C6.9 0 6 .9 6 2V18C6 19.1 6.9 20 8 20H20C21.1 20 22 19.1 22 18V6L16 0M20 18H8V2H15V7H20V18M4 4V22H20V24H4C2.9 24 2 23.1 2 22V4H4M10 10V12H18V10H10M10 14V16H15V14H10Z"></path>
+                </svg>Paper
+            </a>
+            <a class="btn btn-light" role="button" href="https://github.com/wookiekim/CorrespondentDream">
+                <svg xmlns="http://www.w3.org/2000/svg" style="width:24px;height:24px;margin-left:-12px;margin-right:12px" viewBox="0 0 24 24">
+                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 
+                            1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 
+                            3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 
+                            2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path>
+                </svg>
+                Code
+            </a>
+            <a class="btn btn-light" role="button" target="_blank" href="CorrespondentDream.bibtex">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M9.983 3v7.391c0 5.704-3.731 9.57-8.983 10.609l-.995-2.151c2.432-.917 3.995-3.638 3.995-5.849h-4v-10h9.983zm14.017 0v7.391c0 5.704-3.748 9.571-9 10.609l-.996-2.151c2.433-.917 3.996-3.638 3.996-5.849h-3.983v-10h9.983z"/></svg>
+                Bibtex
+            </a>
+            <!-- <a class="btn btn-light" role="button" href="gallery_0.html">
+                <svg style="width:24px;height:24px;margin-left:-12px;margin-right:12px" width="24px" height="24px" viewBox="0 0 375 531">
+                    <polygon stroke="#000000" points="0.5,0.866 459.5,265.87 0.5,530.874 "></polygon>
+                </svg>
+                Gallery (New)
+            </a> -->
+        </div>
+        <!-- <div class="container" style="max-width: 768px;">
+            <div class="row authors">
+                <div class="col-sm-12">
+                    <h5 class="text-center" style="text-align: center">Authors anonymized</h5>
+                </div>
+            </div>    
+        </div> -->
+    </div>
+
+    <hr class="divider" />
+    <div class="container" style="max-width: 768px;">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Abstract</h2>
+                <p>
+                    We propose CorrespondentDream, an effective method to leverage annotation-free, cross-view correspondences yielded from the diffusion U-Net to provide additional 3D prior to the NeRF optimization process. We find that these correspondences are strongly consistent with human perception, and by adopting it in our loss design, we are able to produce NeRF models with geometries that are more coherent with common sense, e.g., more smoothed object surface, yielding higher 3D fidelity. We demonstrate the efficacy of our approach through various comparative qualitative results.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="container" style="max-width: 768px;">
+        <div class="row captioned_videos">
+            <div class="col-md-12">
+                <img src="static/main_overview.jpg" alt="architecture" style="width: 100%">
+                <h6 class="caption" style="text-align: left";>
+                    We optimize NeRF alternately using the SDS loss and cross-view correspondence loss. 
+                    To compute the cross-view correspondence loss, we render two adjacent view sets from NeRF with identical noise, inputting them into a frozen pre-trained multi-view diffusion model.
+                    We then extract multi-layer features from the diffusion U-Net’s upsampling layers to establish diffusion correspondences between each view pair.
+                    Utilizing ground-truth camera parameters and NeRF-rendered depth, we reproject pixels to obtain NeRF correspondences.
+                    By minimizing the discrepancy between diffusion correspondences (the pseudo ground-truth) and NeRF correspondences, we correct NeRF’s 3D infidelities in the depths.
+                </h6>
+            </div>
+        </div>
+    </div>
+    
+    <hr class="divider" />
+    <div class="container" style="max-width: 768px;">
+        <div class="row">
+            <div class="col-sm-12">
+                <h2>Top: Baseline (MVDream)</h2> 
+                <h2>Bottom: Ours (CorrespondentDream)</h2> 
+                <p>CorrespondentDream generates multi-view consistent objects and scenes with <b><i>improved 3D fidelity</i></b></p>
+                <p>Zoom in for clearer visualization of the infidelities in 3D geometry such as concavities / missing surfaces.</p>
+            </div>
+        </div>
+        <!-- <div class="row captioned_videos">
+            <div class="col-4">
+                <div class="video-compare-container" style="width: 100%">
+                    <video class="video lazy" id="ex1" loop playsinline autoplay muted onplay="resizeAndPlay(this)" style="height: 0px;">
+                        <source data-src="static/bichon_nocorr.mp4" type="video/mp4"></source>
+                    </video>
+                    <canvas height="752" class="videoMerge" id="ex1Merge" width="1002"></canvas>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="video-compare-container" style="width: 100%">
+                    <video class="video lazy" id="ex2" loop playsinline autoplay muted onplay="resizeAndPlay(this)" style="height: 0px;">
+                        <source data-src="static/elephant_nocorr.mp4" type="video/mp4"></source>
+                    </video>
+                    <canvas height="752" class="videoMerge" id="ex2Merge" width="1002"></canvas>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="video-compare-container" style="width: 100%">
+                    <video class="video lazy" id="ex3" loop playsinline autoplay muted onplay="resizeAndPlay(this)" style="height: 0px;">
+                        <source data-src="static/puppy_nocorr.mp4" type="video/mp4"></source>
+                    </video>
+                    <canvas height="752" class="videoMerge" id="ex3Merge" width="1002"></canvas>
+                </div>
+            </div>
+        </div> -->
+    
+        <div class="row captioned_videos">
+            <div class="col-4">
+                <div class="video-compare-container" style="width: 100%">
+                    <video class="video lazy" id="ex4" loop playsinline autoplay muted onplay="resizeAndPlay(this)" style="height: 0px;">
+                        <source data-src="static/bichon_merged.mp4" type="video/mp4"></source>
+                    </video>
+                    <canvas height="752" class="videoMerge" id="ex4Merge" width="1002"></canvas>
+                </div>
+                <h6><b>A bichon frise wearing academic regalia</b></h6>
+            </div>
+            <div class="col-4">
+                <div class="video-compare-container" style="width: 100%">
+                    <video class="video lazy" id="ex5" loop playsinline autoplay muted onplay="resizeAndPlay(this)" style="height: 0px;">
+                        <source data-src="static/elephant_merged.mp4" type="video/mp4"></source>
+                    </video>
+                    <canvas height="752" class="videoMerge" id="ex5Merge" width="1002"></canvas>
+                </div>
+                <h6><b>A cute steampunk elephant</b></h6>
+            </div>
+            <div class="col-4">
+                <div class="video-compare-container" style="width: 100%">
+                    <video class="video lazy" id="ex6" loop playsinline autoplay muted onplay="resizeAndPlay(this)" style="height: 0px;">
+                        <source data-src="static/puppy_merged.mp4" type="video/mp4"></source>
+                    </video>
+                    <canvas height="752" class="videoMerge" id="ex6Merge" width="1002"></canvas>
+                </div>
+                <h6><b>A DSLR photo of a corgi puppy</b></h6>
+            </div>
+        </div>
+    <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+        <!-- <div class="row captioned_videos">
+            <div class="col-4">
+                <div class="video-compare-container" style="width: 100%">
+                    <video class="video lazy" id="ex7" loop playsinline autoplay muted onplay="resizeAndPlay(this)" style="height: 0px;">
+                        <source data-src="static/wagon_nocorr.mp4" type="video/mp4"></source>
+                    </video>
+                    <canvas height="752" class="videoMerge" id="ex7Merge" width="1002"></canvas>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="video-compare-container" style="width: 100%">
+                    <video class="video lazy" id="ex8" loop playsinline autoplay muted onplay="resizeAndPlay(this)" style="height: 0px;">
+                        <source data-src="static/collie_nocorr.mp4" type="video/mp4"></source>
+                    </video>
+                    <canvas height="752" class="videoMerge" id="ex8Merge" width="1002"></canvas>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="video-compare-container" style="width: 100%">
+                    <video class="video lazy" id="ex9" loop playsinline autoplay muted onplay="resizeAndPlay(this)" style="height: 0px;">
+                        <source data-src="static/walrus_nocorr.mp4" type="video/mp4"></source>
+                    </video>
+                    <canvas height="752" class="videoMerge" id="ex9Merge" width="1002"></canvas>
+                </div>
+            </div>
+        </div> -->
+        <div class="row captioned_videos">
+            <div class="col-4">
+                <div class="video-compare-container" style="width: 100%">
+                    <video class="video lazy" id="ex22" loop playsinline autoplay muted onplay="resizeAndPlay(this)" style="height: 0px;">
+                        <source data-src="static/pug_merged.mp4" type="video/mp4"></source>
+                    </video>
+                    <canvas height="752" class="videoMerge" id="ex22Merge" width="1002"></canvas>
+                </div>
+                <h6><b>a zoomed out DSLR photo of a pug made out of modeling clay</b></h6>
+            </div>
+            <div class="col-4">
+                <div class="video-compare-container" style="width: 100%">
+                    <video class="video lazy" id="ex23" loop playsinline autoplay muted onplay="resizeAndPlay(this)" style="height: 0px;">
+                        <source data-src="static/yorkie_merged.mp4" type="video/mp4"></source>
+                    </video>
+                    <canvas height="752" class="videoMerge" id="ex23Merge" width="1002"></canvas>
+                </div>
+                <h6><b>a zoomed out DSLR photo of a yorkie dog dressed as a maid</b></h6>
+            </div>
+            <div class="col-4">
+                <div class="video-compare-container" style="width: 100%">
+                    <video class="video lazy" id="ex24" loop playsinline autoplay muted onplay="resizeAndPlay(this)" style="height: 0px;">
+                        <source data-src="static/astronaut_merged.mp4" type="video/mp4"></source>
+                    </video>
+                    <canvas height="752" class="videoMerge" id="ex24Merge" width="1002"></canvas>
+                </div>
+                <h6><b>an astronaut riding a horse</b></h6>
+            </div>
+        </div>
+        <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+        <!-- <div class="row captioned_videos">
+            <div class="col-4">
+                <div class="video-compare-container" style="width: 100%">
+                    <video class="video lazy" id="ex25" loop playsinline autoplay muted onplay="resizeAndPlay(this)" style="height: 0px;">
+                        <source data-src="static/orangutan_nocorr.mp4" type="video/mp4"></source>
+                    </video>
+                    <canvas height="752" class="videoMerge" id="ex25Merge" width="1002"></canvas>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="video-compare-container" style="width: 100%">
+                    <video class="video lazy" id="ex26" loop playsinline autoplay muted onplay="resizeAndPlay(this)" style="height: 0px;">
+                        <source data-src="static/walle_nocorr.mp4" type="video/mp4"></source>
+                    </video>
+                    <canvas height="752" class="videoMerge" id="ex26Merge" width="1002"></canvas>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="video-compare-container" style="width: 100%">
+                    <video class="video lazy" id="ex27" loop playsinline autoplay muted onplay="resizeAndPlay(this)" style="height: 0px;">
+                        <source data-src="static/tophat_nocorr.mp4" type="video/mp4"></source>
+                    </video>
+                    <canvas height="752" class="videoMerge" id="ex27Merge" width="1002"></canvas>
+                </div>
+            </div>
+        </div> -->
+        <div class="row captioned_videos">
+            <div class="col-4">
+                <div class="video-compare-container" style="width: 100%">
+                    <video class="video lazy" id="ex28" loop playsinline autoplay muted onplay="resizeAndPlay(this)" style="height: 0px;">
+                        <source data-src="static/orangutan_merged.mp4" type="video/mp4"></source>
+                    </video>
+                    <canvas height="752" class="videoMerge" id="ex28Merge" width="1002"></canvas>
+                </div>
+                <h6><b>an orangutan holding a paint palette in one hand and a paintbrush in the other hand</b></h6>
+            </div>
+            <div class="col-4">
+                <div class="video-compare-container" style="width: 100%">
+                    <video class="video lazy" id="ex29" loop playsinline autoplay muted onplay="resizeAndPlay(this)" style="height: 0px;">
+                        <source data-src="static/walle_merged.mp4" type="video/mp4"></source>
+                    </video>
+                    <canvas height="752" class="videoMerge" id="ex29Merge" width="1002"></canvas>
+                </div>
+                <h6><b>Wall-E, cute, render, super detailed, best quality, 4K, HD</b></h6>
+            </div>
+            <div class="col-4">
+                <div class="video-compare-container" style="width: 100%">
+                    <video class="video lazy" id="ex30" loop playsinline autoplay muted onplay="resizeAndPlay(this)" style="height: 0px;">
+                        <source data-src="static/tophat_merged.mp4" type="video/mp4"></source>
+                    </video>
+                    <canvas height="752" class="videoMerge" id="ex30Merge" width="1002"></canvas>
+                </div>
+                <h6><b>A zoomed out DSLR photo of a corgi wearing a top hat</b></h6>
+            </div>
+        </div>
+    
+    </div>    
+    <hr class="divider" />
+    <div class="container" style="max-width: 768px;">
+        <footer>
+            <p> We borrowed this website template from <a href="https://dreamfusion3d.github.io/">DreamFusion</a> with much gratitude and appreciation.</p>
+        </footer>
+    </div>
+    <script src="https://polyfill.io/v3/polyfill.js?features=IntersectionObserver"></script>
+    <script src="assets/js/yall.js"></script>
+    <script>
+        yall(
+            {
+                observeChanges: true
+            }
+        );
+    </script>
+    <script src="assets/js/scripts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://uploads-ssl.webflow.com/51e0d73d83d06baa7a00000f/js/webflow.fd002feec.js"></script>
+    <!-- Import the component -->
+</body>
+
+</html>
