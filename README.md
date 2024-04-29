@@ -1,7 +1,7 @@
 # CorrespondentDream: Enhancing 3D Fidelity of Text-to-3D using Cross-View Correspondences (CVPR'24)
 Seungwook Kim, Kejie Li, Xueqing Deng, Yichun Shi, Minsu Cho, Peng Wang
 
-| [Project Page](https://wookiekim.github.io/) | [Paper](https://arxiv.org/abs/2404.10603) |
+| [Project Page](https://wookiekim.github.io/CorrespondentDream/) | [Paper](https://arxiv.org/abs/2404.10603) |
 
 ![correspondentdream-teaser](./CorrespondentDream_qual.jpg)
 
@@ -121,11 +121,10 @@ Big thanks to all the projects and their open-sourced code!
 If you find MVDream helpful, please consider citing:
 
 ```
-@article{@article{kim2024correspondentdream,
+@article{kim2024correspondentdream,
   title={Enhancing 3D Fidelity of Text-to-3D using Cross-View Correspondences},
   author={Kim, Seungwook and Li, Kejie and Deng, Xueqing and Shi, Yichun and Cho, Minsu and Wang, Peng},
   journal={arXiv preprint arXiv:2404.10603},
   year={2024}
-}
 }
 ```
