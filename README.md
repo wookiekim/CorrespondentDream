@@ -109,6 +109,7 @@ python launch.py --config path/to/trial/dir/configs/parsed.yaml --train --gpu 0 
 
 ## Tips
 - **Preview**. Generating 3D content with SDS would a take a lot of time. So we suggest to use the 2D multi-view image generation [MVDream](https://github.com/bytedance/MVDream) to test if the model can really understand the text before using it for 3D generation.
+- **Compatibility of CorrespondentDream with text prompt**. CorrespondentDream may not always be effective for all types of different prompts, particularly given too homogeneous or shiny surfaces. It will usually not make the output worse, so it's worth a try at a cost of slightly increased time.
 - **Rescale Factor**. We introducte rescale adjustment from [Shanchuan et al.](https://arxiv.org/abs/2305.08891) to alleviate the texture over-saturation from large CFG guidance. However, in some cases, we find it to cause floating noises in the generated scene and consequently OOM issue. Therefore we reduce the rescale factor from 0.7 in original paper to 0.5. However, if you still encounter such a problem, please try to further reduce `system.guidance.recon_std_rescale=0.3`.
 
 ## Credits
